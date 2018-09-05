@@ -3,10 +3,13 @@ const path = require("path");
 
 const app = express();
 
+
 const publicPath = path.join(__dirname, "/");
+
+const port = process.env.PORT || 3000;
 
 app.use(express.static(publicPath));
 
-app.listen(3000, () =>{
+app.listen(port, () =>{
     console.log("Portal open on post 3000");
 });
